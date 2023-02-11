@@ -1,7 +1,11 @@
 <h1>投稿一覧</h1>
 <% @books.each do |book| %>
- <table>タイトル</table>
- <span><%= book.title %></span>
+ <table>タイトル
+ <span>
+  <%= link_to book.title, book_path(book.id) %>
+ </span>
+ </table>
+ 
 <% end %>
 
 <h1>新規登録</h1>
